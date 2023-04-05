@@ -1,0 +1,13 @@
+.focused {
+    background-color: aquamarine;
+}
+
+.cell {
+    &:hover {
+        border: 5px solid red;
+    }
+}
+
+.fixed-list {
+    background-color: antiquewhite;
+}
