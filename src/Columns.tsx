@@ -1,6 +1,6 @@
 import { FocusContext, useFocusable } from '@noriginmedia/norigin-spatial-navigation';
 import Cell from 'Cell';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList } from 'react-window';
 import { useAnimatedList } from 'use-AnimatedList';
@@ -12,9 +12,7 @@ const PAGE_SIZE = 20;
 const IS_ANIMATION_ENABLED = false;
 
 const Columns: React.VFC = () => {
-    const array = useMemo(() => new Array(0).fill(true).map(() => 75 + Math.round(Math.random() * 50)), []);
-
-    const itemsRef = useRef<any[]>(array);
+    const itemsRef = useRef<any[]>([]);
     const listRef = useRef<any>(null);
 
     const currentIndexRef = useRef<number>(0);
